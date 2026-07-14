@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght=300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Utility Classes */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  border: 1px solid #fff;
+}
+
+.btn-primary:hover {
+  background: #e4b95b;
+}
+
+.primary-text {
+  color: #e4b95b;
+}
+
+/* Header Start */
+header {
+  height: 100vh;
+  background: url("./img/home_bg.jpeg") center center/cover no-repeat;
+  position: relative;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+#navbar img {
+  width: 80px;
+  margin-left: 100px;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 100px;
+}
+
+nav ul li a {
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #e4b95b;
+}
+
+header .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75%; 
+}
+
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0, 0.6);
+}
+
+header .content h1 {
+  font-size: 40px;
+  color: #fff;
+}
+
+header .content p {
+  color: #fff;
+  margin: 20px 0 40px;
+}
+
+header * {
+  z-index: 10;
+}
+/* Header End */
+
+/* ---------------------------------------------------- */
+/* Global Subject Section Styling (Based on your Layout) */
+/* ---------------------------------------------------- */
+
+/* Branch content mimics your "about-content" with list on left and image on right */
+.branch-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.constants-list {
+  width: 55%;
+}
+
+.constant-item {
+  margin-bottom: 25px;
+}
+
+.constant-item h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #c2bdbd;
+  padding-bottom: 5px;
+}
+
+.constant-item p {
+  font-size: 14px;
+  color: #9a9a9a;
+  line-height: 1.6;
+}
+
+/* Photo Box styles - Custom made placeholders to add your photos */
+.image-placeholder {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-box {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  border: 3px dashed;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.photo-box i {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.photo-box p {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Fallback image style: If you drop a real image into your folder, it will fit perfectly */
+.fallback-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* Change to 1 or remove this opacity once you place real photos inside ./img/ */
+}
+
+.photo-box:hover .fallback-img {
+  opacity: 0.15; /* Nice soft hover effect showing image background */
+}
+
+/* ---------------------------------------------------- */
+/* Individual Designs for Each Subject                 */
+/* ---------------------------------------------------- */
+
+/* 1. Mathematics Section (Blue / Indigo Theme) */
+#math {
+  padding: 5rem 0;
+  background-color: #f4f6f9;
+}
+
+#math h2 {
+  color: #2c3e50;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#math .title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#math .title p {
+  font-weight: 600;
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+#math .subject-text {
+  color: #2980b9;
+}
+
+#math .photo-box {
+  border-color: #2980b9;
+  background-color: #ebf5fb;
+  color: #2980b9;
+}
+
+
+/* 2. Physics Section (Dark / Neon Gold Theme) */
+#physics {
+  padding: 5rem 0;
+  background: #1a1a24;
+  color: #fff;
+}
+
+#physics h2 {
+  color: #e4b95b;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#physics .title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#physics .title p {
+  font-weight: 600;
+  font-size: 14px;
+  color: #c2bdbd;
+}
+
+#physics .subject-text {
+  color: #e4b95b;
+}
+
+#physics .constant-item p {
+  color: #c2bdbd;
+}
+
+#physics .photo-box {
+  border-color: #e4b95b;
+  background-color: #252533;
+  color: #e4b95b;
+}
+
+
+/* 3. Chemistry Section (Emerald Green Theme) */
+#chemistry {
+  padding: 5rem 0;
+  background-color: #f2f9f5;
+}
+
+#chemistry h2 {
+  color: #1e8449;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#chemistry .title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#chemistry .title p {
+  font-weight: 600;
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+#chemistry .subject-text {
+  color: #27ae60;
+}
+
+#chemistry .photo-box {
+  border-color: #27ae60;
+  background-color: #e8f8f5;
+  color: #27ae60;
+}
+
+
+/* 4. Biology Section (Warm Rose/Organic Theme) */
+#biology {
+  padding: 5rem 0;
+  background-color: #faf3f3;
+}
+
+#biology h2 {
+  color: #b03a2e;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#biology .title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#biology .title p {
+  font-weight: 600;
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+#biology .subject-text {
+  color: #e74c3c;
+}
+
+#biology .photo-box {
+  border-color: #e74c3c;
+  background-color: #fdedec;
+  color: #e74c3c;
+}
+
+/* Footer Start */
+#footer {
+  background-color: #1a1a24;
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+}
+/* Footer End */
+
+/* ---------------------------------------------------- */
+/* Responsiveness & Media Queries                       */
+/* ---------------------------------------------------- */
+
+/* Medium Screen + Tablet */
+@media (max-width: 1000px) {
+  #navbar img {
+    margin-left: 20px;
+  }
+
+  nav ul {
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    padding: 10px;
+  }
+
+  header .content h1 {
+    font-size: 28px;
+  }
+
+  .branch-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .constants-list {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .image-placeholder {
+    width: 80%;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  #navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  #navbar img {
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  nav ul {
+    margin-right: 0;
+  }
+
+  header .content h1 {
+    font-size: 20px;
+  }
+
+  header .content p {
+    font-size: 14px;
+  }
+
+  #math h2, #physics h2, #chemistry h2, #biology h2 {
+    font-size: 28px;
+  }
+
+  .image-placeholder {
+    width: 100%;
+  }
+
+  .photo-box {
+    height: 250px;
+  }
+}
